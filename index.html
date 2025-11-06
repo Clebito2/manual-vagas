@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual de Divulgação de Vaga - Live Consultoria</title>
 
-    <!-- 1.2. Importação de Tipografia (Obrigatório) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- 1.2. Importação de Tipografia (Obrigatório) --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -20,6 +19,7 @@
             --text-primary: #ffffff;
             --text-muted: #cccccc;
             --text-subtle: #a0a0a0;
+            --text-light-white: #E0E0E0; /* Novo tom de branco mais claro */
             --border-color: rgba(255, 255, 255, 0.1);
             --accent-glow: 0 0 8px rgba(0, 232, 0, 0.7);
 
@@ -112,7 +112,7 @@
         }
 
         header .logo {
-            max-width: 130px; /* Ajustado */
+            max-width: 100px; /* Ajustado novamente para menor */
             border-radius: 8px; /* Adicionado para arredondar as bordas */
         }
 
@@ -190,10 +190,10 @@
             padding-left: var(--space-sm);
         }
 
-        /* Diretriz de UX: Usar --text-subtle para parágrafos longos */
+        /* Diretriz de UX: Usar --text-light-white para parágrafos e itens de lista padrão */
         .card p,
         .card li {
-            color: var(--text-subtle);
+            color: var(--text-light-white); /* Cor de texto padrão dos cards */
             font-size: 1rem;
             max-width: 70ch; /* Limite de caracteres por linha (UX) */
         }
@@ -259,7 +259,7 @@
         
         .tip-box p, .tip-box li,
         .explanation-box p, .explanation-box li {
-            color: var(--text-muted);
+            color: var(--text-subtle); /* Mantém o tom mais sutil aqui */
             font-size: 0.95rem;
         }
 
@@ -336,6 +336,11 @@
         }
         /* Fim dos novos estilos */
 
+        /* Ajuste de espaçamento específico */
+        .card ul:first-of-type > li:first-child {
+            margin-top: var(--space-md); /* Espaço maior para a primeira li após o box */
+        }
+
 
         /* 3. Rodapé (Footer) */
         footer {
@@ -395,27 +400,21 @@
 </head>
 <body>
 
-    <!-- Barra de Progresso (Nova) -->
-    <div class="progress-bar-container">
+    <!-- Barra de Progresso (Nova) --><div class="progress-bar-container">
         <div class="progress-bar" id="pageProgressBar"></div>
     </div>
 
-    <!-- 3. Cabeçalho (Header) -->
-    <header>
+    <!-- 3. Cabeçalho (Header) --><header>
         <div class="container">
-            <!-- 2.1. Logo Principal -->
-            <img src="https://raw.githubusercontent.com/Clebito2/ConsultoriaLive/main/Logo%20live%20oficial-21.png" 
+            <!-- 2.1. Logo Principal --><img src="https://raw.githubusercontent.com/Clebito2/ConsultoriaLive/main/Logo%20live%20oficial-21.png" 
                  alt="Logo Live Consultoria" 
                  class="logo"
-                 width="130" height="30"> <!-- Atributos de performance -->
-        </div>
+                 width="100" height="23"> <!-- Atributos de performance atualizados --></div>
     </header>
 
-    <!-- 3. Conteúdo Principal (main) -->
-    <main>
+    <!-- 3. Conteúdo Principal (main) --><main>
 
-        <!-- Seção Hero (Título e Intro) -->
-        <section class="hero-section" aria-labelledby="manual-title">
+        <!-- Seção Hero (Título e Intro) --><section class="hero-section" aria-labelledby="manual-title">
             <div class="container">
                 <h1 id="manual-title" class="fade-in">Manual Prático: Como Divulgar uma Vaga de Vendedor</h1>
                 <p class="subtitle fade-in">
@@ -424,13 +423,11 @@
             </div>
         </section>
 
-        <!-- Seção de Conteúdo (Passos) -->
-        <section class="content-section" aria-label="Guia Passo a Passo">
+        <!-- Seção de Conteúdo (Passos) --><section class="content-section" aria-label="Guia Passo a Passo">
             <div class="container">
                 <div class="steps-grid">
 
-                    <!-- Passo 1 -->
-                    <article class="card fade-in" aria-labelledby="passo1-title">
+                    <!-- Passo 1 --><article class="card fade-in" aria-labelledby="passo1-title">
                         <h3 id="passo1-title">Passo 1: Análise Preliminar e Definição do Perfil</h3>
                         
                         <h4>Objetivo</h4>
@@ -473,8 +470,7 @@
                         <p>Anúncios que pedem "habilidades analíticas" (saber ler dados no CRM, entender o pipeline) atraem candidatos mais preparados para vendas B2B (vendas complexas de empresa para empresa). Cuidado com expectativas irreais (pedir 10 anos de experiência para um cargo júnior) para não afastar bons talentos.</p>
                     </article>
 
-                    <!-- Passo 2 -->
-                    <article class="card fade-in" aria-labelledby="passo2-title">
+                    <!-- Passo 2 --><article class="card fade-in" aria-labelledby="passo2-title">
                         <h3 id="passo2-title">Passo 2: Pesquisa de Mercado e Benchmarking</h3>
                         
                         <h4>Objetivo</h4>
@@ -492,8 +488,7 @@
                         </div>
                     </article>
 
-                    <!-- Passo 3 -->
-                    <article class="card fade-in" aria-labelledby="passo3-title">
+                    <!-- Passo 3 --><article class="card fade-in" aria-labelledby="passo3-title">
                         <h3 id="passo3-title">Passo 3: Estruturação do Conteúdo do Anúncio</h3>
                         
                         <h4>Objetivo</h4>
@@ -546,8 +541,7 @@
                         </div>
                     </article>
 
-                    <!-- Passo 4 -->
-                    <article class="card fade-in" aria-labelledby="passo4-title">
+                    <!-- Passo 4 --><article class="card fade-in" aria-labelledby="passo4-title">
                         <h3 id="passo4-title">Passo 4: Otimização para Visibilidade e Acessibilidade</h3>
                         
                         <h4>Objetivo</h4>
@@ -561,8 +555,7 @@
                         </ul>
                     </article>
 
-                    <!-- Passo 5 -->
-                    <article class="card fade-in" aria-labelledby="passo5-title">
+                    <!-- Passo 5 --><article class="card fade-in" aria-labelledby="passo5-title">
                         <h3 id="passo5-title">Passo 5: Revisão, Publicação e Monitoramento</h3>
                         
                         <h4>Objetivo</h4>
@@ -587,8 +580,7 @@
                         </div>
                     </article>
 
-                    <!-- Exemplo -->
-                    <article class="card fade-in" aria-labelledby="exemplo-title">
+                    <!-- Exemplo --><article class="card fade-in" aria-labelledby="exemplo-title">
                         <h3 id="exemplo-title">Exemplo de Anúncio Integrado (Modelo)</h3>
                         <pre>
 **Vaga: Vendedor(a) Interno(a) - Setor de Tecnologia (SaaS)**
@@ -629,8 +621,7 @@ Somos uma empresa inovadora em soluções digitais (SaaS) para o mercado de log�
                         </pre>
                     </article>
 
-                    <!-- Conclusão -->
-                    <article class="card fade-in" aria-labelledby="conclusao-title">
+                    <!-- Conclusão --><article class="card fade-in" aria-labelledby="conclusao-title">
                         <h3 id="conclusao-title">Conclusão: O Custo da Contratação Errada</h3>
                         <p>Seguir este manual exige mais tempo no início (no planejamento), mas economiza um tempo enorme (e muito dinheiro) ao evitar a contratação de um perfil desalinhado. Um anúncio claro é o primeiro e mais importante filtro para construir uma equipe de vendas de alta performance.</p>
                     </article>
@@ -641,16 +632,14 @@ Somos uma empresa inovadora em soluções digitais (SaaS) para o mercado de log�
 
     </main>
 
-    <!-- 3. Rodapé (Footer) -->
-    <footer>
+    <!-- 3. Rodapé (Footer) --><footer>
         <div class="container">
             <p>&copy; 2025 Live Consultoria. Todos os direitos reservados.</p>
             <p>Desenvolvido por Cléber Donato</p>
         </div>
     </footer>
 
-    <!-- 5. Animações e Performance (JavaScript para IntersectionObserver) -->
-    <script>
+    <!-- 5. Animações e Performance (JavaScript para IntersectionObserver) --><script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Animação Fade-in ---
             const targets = document.querySelectorAll('.fade-in');
