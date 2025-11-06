@@ -112,8 +112,10 @@
         }
 
         header .logo {
-            max-width: 100px; /* Ajustado novamente para menor */
-            border-radius: 8px; /* Adicionado para arredondar as bordas */
+            max-width: 50px; /* Ajustado para 50px */
+            height: 50px; /* Forçado 50px para ser um quadrado */
+            border-radius: 50%; /* 50% para um círculo perfeito */
+            object-fit: cover; /* Garante que a imagem preencha o círculo */
         }
 
         /* 3. Estrutura e Layout (main) */
@@ -215,18 +217,38 @@
             gap: 0.25rem; /* Smaller gap */
         }
         
-        /* Bloco de Exemplo de Anúncio */
-        .card pre {
+        /* Bloco de Exemplo de Anúncio (Substituído <pre> por <div>) */
+        .anuncio-exemplo {
             background-color: var(--primary-bg);
             border: 1px solid var(--border-color);
             padding: var(--space-sm);
             border-radius: 8px;
             color: var(--text-muted);
             font-family: 'Courier New', Courier, monospace;
-            white-space: pre-wrap;
-            word-wrap: break-word;
             font-size: 0.95rem;
+            line-height: 1.6;
         }
+        .anuncio-exemplo p, .anuncio-exemplo ul {
+            margin-bottom: var(--space-sm);
+            color: var(--text-muted); /* Garante que os <p> tenham a cor correta */
+        }
+        .anuncio-exemplo strong {
+            color: var(--text-light-white); /* Destaque maior para o negrito */
+            font-weight: 700;
+        }
+        .anuncio-exemplo ul {
+            list-style-type: none; /* Remove bullets */
+            padding-left: 0; /* Remove padding */
+            margin-bottom: var(--space-sm);
+        }
+        .anuncio-exemplo ul li {
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+        .anuncio-exemplo p:last-child {
+            margin-bottom: 0; /* Remove margem do último parágrafo */
+        }
+        /* Fim do Bloco de Exemplo */
 
         /* Novos Estilos para Dicas e Explicações */
         .tip-box, .explanation-box {
@@ -406,10 +428,10 @@
 
     <!-- 3. Cabeçalho (Header) --><header>
         <div class="container">
-            <!-- 2.1. Logo Principal --><img src="https://raw.githubusercontent.com/Clebito2/ConsultoriaLive/main/Logo%20live%20oficial-21.png" 
+            <!-- 2.1. Logo (Trocado para o ícone de proposta/layout) --><img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" 
                  alt="Logo Live Consultoria" 
                  class="logo"
-                 width="100" height="23"> <!-- Atributos de performance atualizados --></div>
+                 width="50" height="50"> <!-- Atributos de performance atualizados --></div>
     </header>
 
     <!-- 3. Conteúdo Principal (main) --><main>
@@ -582,43 +604,53 @@
 
                     <!-- Exemplo --><article class="card fade-in" aria-labelledby="exemplo-title">
                         <h3 id="exemplo-title">Exemplo de Anúncio Integrado (Modelo)</h3>
-                        <pre>
-**Vaga: Vendedor(a) Interno(a) - Setor de Tecnologia (SaaS)**
-
-**Sobre Nós:**
-Somos uma empresa inovadora em soluções digitais (SaaS) para o mercado de logística, valorizando a diversidade, a colaboração e o crescimento dos nossos times.
-
-**Suas Responsabilidades (O que você fará):**
-- Prospectar ativamente leads qualificados (B2B) através de e-mail, telefone e LinkedIn.
-- Gerenciar seu pipeline de vendas no CRM (Pipedrive), garantindo follow-ups constantes.
-- Realizar demonstrações online da nossa plataforma, entendendo a dor do cliente.
-- Negociar propostas e fechar novos negócios, focado em bater metas mensais.
-
-**O que buscamos (Requisitos Obrigatórios):**
-- Mínimo de 2 anos de experiência em vendas internas (Inside Sales), preferencialmente em B2B.
-- Experiência prática com alguma ferramenta de CRM (ex: Pipedrive, HubSpot, Salesforce).
-- Excelente comunicação (clara e persuasiva) e habilidade de negociação.
-- Proatividade e resiliência para lidar com um ciclo de vendas consultivo.
-
-**O que seria um diferencial (Desejável):**
-- Conhecimento no setor de Logística ou SaaS.
-- Inglês intermediário (para ler materiais).
-
-**O que oferecemos (Condições):**
-- Salário Fixo (CLT): R$ 3.000,00
-- Comissões agressivas e sem teto (média de ganhos R$ 2.500+)
-- Benefícios: Vale Refeição (R$ 32/dia), Plano de Saúde e Odontológico (100% pago).
-- Modalidade: Híbrido (3x por semana no escritório em [Cidade]).
-- Oportunidade real de crescimento (Plano de Carreira).
-
-**Nosso Processo:**
-1. Análise de CV
-2. Entrevista com RH
-3. Simulação de Vendas (Roleplay)
-4. Entrevista final com Gestor
-
-**Envie seu CV para rh@empresa.com.br com o assunto "Vaga Vendedor SaaS".**
-                        </pre>
+                        <div class="anuncio-exemplo">
+                            <p><strong>Vaga: Vendedor(a) Interno(a) - Setor de Tecnologia (SaaS)</strong></p>
+                        
+                            <p><strong>Sobre Nós:</strong><br>
+                            Somos uma empresa inovadora em soluções digitais (SaaS) para o mercado de logística, valorizando a diversidade, a colaboração e o crescimento dos nossos times.</p>
+                        
+                            <p><strong>Suas Responsabilidades (O que você fará):</strong></p>
+                            <ul>
+                                <li>- Prospectar ativamente leads qualificados (B2B) através de e-mail, telefone e LinkedIn.</li>
+                                <li>- Gerenciar seu pipeline de vendas no CRM (Pipedrive), garantindo follow-ups constantes.</li>
+                                <li>- Realizar demonstrações online da nossa plataforma, entendendo a dor do cliente.</li>
+                                <li>- Negociar propostas e fechar novos negócios, focado em bater metas mensais.</li>
+                            </ul>
+                        
+                            <p><strong>O que buscamos (Requisitos Obrigatórios):</strong></p>
+                            <ul>
+                                <li>- Mínimo de 2 anos de experiência em vendas internas (Inside Sales), preferencialmente em B2B.</li>
+                                <li>- Experiência prática com alguma ferramenta de CRM (ex: Pipedrive, HubSpot, Salesforce).</li>
+                                <li>- Excelente comunicação (clara e persuasiva) e habilidade de negociação.</li>
+                                <li>- Proatividade e resiliência para lidar com um ciclo de vendas consultivo.</li>
+                            </ul>
+                        
+                            <p><strong>O que seria um diferencial (Desejável):</strong></p>
+                            <ul>
+                                <li>- Conhecimento no setor de Logística ou SaaS.</li>
+                                <li>- Inglês intermediário (para ler materiais).</li>
+                            </ul>
+                        
+                            <p><strong>O que oferecemos (Condições):</strong></p>
+                            <ul>
+                                <li>- Salário Fixo (CLT): R$ 3.000,00</li>
+                                <li>- Comissões agressivas e sem teto (média de ganhos R$ 2.500+)</li>
+                                <li>- Benefícios: Vale Refeição (R$ 32/dia), Plano de Saúde e Odontológico (100% pago).</li>
+                                <li>- Modalidade: Híbrido (3x por semana no escritório no escritório em [Cidade]).</li>
+                                <li>- Oportunidade real de crescimento (Plano de Carreira).</li>
+                            </ul>
+                        
+                            <p><strong>Nosso Processo:</strong></p>
+                            <ul>
+                                <li>1. Análise de CV</li>
+                                <li>2. Entrevista com RH</li>
+                                <li>3. Simulação de Vendas (Roleplay)</li>
+                                <li>4. Entrevista final com Gestor</li>
+                            </ul>
+                        
+                            <p><strong>Envie seu CV para rh@empresa.com.br com o assunto "Vaga Vendedor SaaS".</strong></p>
+                        </div>
                     </article>
 
                     <!-- Conclusão --><article class="card fade-in" aria-labelledby="conclusao-title">
